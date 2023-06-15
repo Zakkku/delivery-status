@@ -1,0 +1,205 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Montserrat;
+}
+
+body,
+html {
+    min-width: 100%;
+    min-height: 100vh;
+}
+
+body {
+    background: url(https://assets.codepen.io/6060109/ZigZag.png);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+h2,
+h5 {
+    color: #2F463D;
+}
+
+
+
+.panel {
+    width: 350px;
+    height: 600px;
+    background-color: white;
+    box-shadow: 0px 40px 40px -20px #3C7B61;
+    border-radius: 5px;
+    position: relative;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+}
+
+.inner-container {
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+    /* The width will include padding*/
+    padding: 55px 45px;
+}
+
+.inner-container>h2 {
+    margin: 20px 0 15px;
+    font-weight: 600;
+    font-size: 22px;
+}
+
+.inner-container>p {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 14px;
+    color: #C4C4C4;
+    line-height: 26px;
+}
+
+#food-selection {
+    display: flex;
+    align-items: center;
+    background-color: #F0FFF5;
+    border-radius: 5px;
+    margin: 40px 0 20px;
+}
+
+#food-name-price {
+    width: 50%;
+    text-align: left;
+    padding-left: 15px;
+}
+
+#food-name-price>h5 {
+    font-weight: 800;
+    font-size: 14px;
+    margin-bottom: 3px;
+}
+
+#food-name-price>h6 {
+    font-weight: 500;
+    font-size: 14px;
+    margin-bottom: 3px;
+    color: #7A8F85;
+}
+
+
+a {
+    color: #467A66;
+    font-weight: bold;
+    font-size: 13px;
+    transition: .3s ease all;
+}
+
+/* mouse over link */
+a:hover {
+    opacity: .8;
+    transition: .3s ease all;
+    cursor: pointer;
+}
+
+.btn {
+    width: 100%;
+    background-color: #46A67E;
+    color: white;
+
+    padding: 13px 60px;
+    border-radius: 5px;
+    font-weight: 900;
+    letter-spacing: .8px;
+    font-size: 14px;
+    margin-top: 13px;
+    margin-bottom: 40px;
+    border: none;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    box-shadow: 0px 20px 20px rgba(103, 189, 153, 0.2);
+    transition: .3s ease all;
+}
+
+.btn:hover {
+    opacity: .8;
+    transition: .3s ease all;
+    cursor: pointer;
+}
+
+.tiny-buttons-container {
+    display: flex;
+    width: 15%;
+    justify-content: space-between;
+    position: absolute;
+    left: 50%;
+    bottom: 5%;
+    transform: translateX(-50%);
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    background-color: grey;
+    background-color: #e0e0e0;
+    border-radius: 100%;
+}
+
+.dot.green {
+    background-color: #46A67E;
+}
+
+/* 695px was chosen because with the current amount of text, some text will be cut off at that size*/
+.panel.left,
+.panel.right {
+    display: none;
+}
+
+@media only screen and (min-width: 1005px) {
+
+
+
+    .panel.left,
+    .panel.right {
+        height: 600px;
+        margin: 70px 0;
+        display: block;
+
+    }
+
+    .panel.center {
+        height: 680px;
+        z-index: 1;
+        margin-left: -15px;
+        margin-right: -15px;
+        width: 400px;
+    }
+
+    #hamburger-img,
+    #delivery-img {
+        width: 42%;
+    }
+
+    #delivery-p {
+        margin-top: 10px;
+    }
+
+    p {
+        margin-top: 40px;
+    }
+
+
+
+    .tracking,
+    .next {
+        background-color: #C4C4C4;
+        box-shadow: 0px 20px 20px rgba(167, 167, 167, 0.2);
+        position: absolute;
+        bottom: 15%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80%;
+
+    }
+}
